@@ -1,0 +1,22 @@
+hotes:
+  hosts:
+   rocky-01:
+      ansible_host: 192.168.56.21
+   rocky-02:
+      ansible_host: 192.168.56.22
+   debian-02:
+     ansible_host: 192.168.56.12
+
+debian:
+  hosts:
+    debian-02:
+
+rocky:
+  hosts:
+    rocky-01:
+    rocky-02:
+  
+srvlinux:
+  children:
+    debian:
+    rocky:
